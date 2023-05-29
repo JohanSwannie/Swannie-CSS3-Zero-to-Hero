@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Creative CSS Example 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="creative-css01.css">
+</head>
+
+<body>
+  <div class="container">
+    <a href="#">
+      <span id='st'>Stellie</span>
+    </a>
+    <a href="#">
+      <span id='sm'>Swannie</span>
+    </a>
+  </div>
+
+  <script>
+    const stellie = document.getElementById('st')
+    const swannie = document.getElementById('sm')
+
+    stellie.addEventListener('click', () => {
+      if (stellie.innerHTML === "Stellie") {
+        stellie.innerHTML = "Swannie"
+        swannie.innerHTML = "Stellie"
+      } else {
+        stellie.innerHTML = "Stellie"
+        swannie.innerHTML = "Swannie"
+      }
+    })
+
+    swannie.addEventListener('click', () => {
+      if (swannie.innerHTML === "Swannie") {
+        swannie.innerHTML = "Stellie"
+        stellie.innerHTML = "Swannie"
+      } else {
+        swannie.innerHTML = "Swannie"
+        stellie.innerHTML = "Stellie"
+      }
+    })
+  </script>
+
+</body>
+
+</html>
