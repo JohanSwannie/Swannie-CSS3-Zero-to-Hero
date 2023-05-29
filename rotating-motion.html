@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <title>Rotation for the Nation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      background: #262626;
+    }
+
+    .rotation {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      height: 350px;
+      background: transparent;
+      border: 150px solid #006400;
+      border-style: double;
+      border-radius: 50%;
+      font-family: 'Tangerine', cursive;
+      font-size: 65px;
+      color: #FFF000;
+      font-weight: bold;
+      text-align: center;
+      line-height: 350px;
+      letter-spacing: 4px;
+      text-shadow: 0 0 1px #FFF000;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0, .5);
+    }
+
+    .rotation:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-top: 5px solid #FFF000;
+      border-right: 3px solid #FFF000;
+      border-radius: 50%;
+      animation: animateCircle1 1.6s linear infinite;
+    }
+
+    .nation {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: transparent;
+    }
+
+
+    .nation:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-top: 3px solid #FFDF00;
+      border-right: 3px solid #FFDF00;
+      border-radius: 50%;
+      animation: animateCircle2 1.6s linear infinite;
+    }
+
+    .station {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      background: transparent;
+    }
+
+
+    .station:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-top: 3px solid #FFDF00;
+      border-right: 3px solid #FFDF00;
+      border-radius: 50%;
+      animation: animateCircle1 1.6s linear infinite;
+    }
+
+    .outer_ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 750px;
+      height: 750px;
+      background: transparent;
+    }
+
+
+    .outer_ring:before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-top: 3px solid #FFDF00;
+      border-right: 3px solid #FFDF00;
+      border-radius: 50%;
+      animation: animateCircle2 1.6s linear infinite;
+    }
+
+    #span1 {
+      display: block;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      width: 50%;
+      height: 4px;
+      background: transparent;
+      transform-origin: left;
+      animation: animate1 1.6s linear infinite;
+    }
+
+    #span1:before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #FFF000;
+      top: -6px;
+      right: -10px;
+      box-shadow: 0 0 20px #FFF000;
+    }
+
+    #span2 {
+      display: block;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      width: 50%;
+      height: 4px;
+      background: transparent;
+      transform-origin: left;
+      animation: animate2 1.6s linear infinite;
+    }
+
+    #span2:before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #FFDF00;
+      top: -4px;
+      right: 494px;
+      box-shadow: 0 0 20px #FFDF00;
+    }
+
+    #span3 {
+      display: block;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      width: 50%;
+      height: 4px;
+      background: transparent;
+      transform-origin: left;
+      animation: animate1 1.6s linear infinite;
+    }
+
+    #span3:before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #FFDF00;
+      top: -1px;
+      left: 343px;
+      box-shadow: 0 0 20px #FFDF00;
+    }
+
+    #span4 {
+      display: block;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      width: 50%;
+      height: 4px;
+      background: transparent;
+      transform-origin: left;
+      animation: animate2 1.6s linear infinite;
+    }
+
+    #span4:before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #FFDF00;
+      top: 2px;
+      left: -385px;
+      box-shadow: 0 0 20px #FFDF00;
+    }
+
+    @keyframes animateCircle1 {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes animate1 {
+      0% {
+        transform: rotate(45deg)
+      }
+
+      100% {
+        transform: rotate(405deg)
+      }
+    }
+
+    @keyframes animateCircle2 {
+      0% {
+        transform: rotate(360deg)
+      }
+
+      100% {
+        transform: rotate(0deg)
+      }
+    }
+
+    @keyframes animate2 {
+      0% {
+        transform: rotate(405deg)
+      }
+
+      100% {
+        transform: rotate(45deg)
+      }
+    }
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="rotation">
+    Jesus
+    Christ
+    <span id='span1'></span>
+  </div>
+  <div class="nation">
+    <span id="span2"></span>
+  </div>
+  <div class="station">
+    <span id="span3"></span>
+  </div>
+  <div class="outer_ring">
+    <span id="span4"></span>
+  </div>
+</body>
+
+</html>
