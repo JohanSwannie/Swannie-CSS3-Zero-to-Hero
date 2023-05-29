@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Colorful ball</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      padding: 0;
+      margin: 0 auto;
+      box-sizing: border-box;
+      transform-style: preserve-3d;
+    }
+
+    body {
+      background-image: radial-gradient(circle at center, #333, #000 30em);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      perspective: 15em;
+    }
+
+    .ball {
+      position: relative;
+      animation: rot 30s infinite linear;
+    }
+
+    @keyframes rot {
+      from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      }
+
+      to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(-360deg);
+      }
+    }
+
+    .x,
+    .y,
+    .z {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 9.5em;
+      height: 9.5em;
+      border-radius: 50%;
+    }
+
+    .x {
+      transform: translate(-50%, -50%);
+    }
+
+    .x .ring {
+      border-color: #f53d3d;
+    }
+
+    .y {
+      transform: translate(-50%, -50%) rotateX(90deg);
+    }
+
+    .y .ring {
+      border-color: #3df53d;
+    }
+
+    .z {
+      transform: translate(-50%, -50%) rotateY(90deg);
+    }
+
+    .z .ring {
+      border-color: #3d3df5;
+    }
+
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10em;
+      height: 10em;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) translateZ(var(--translateZ, 0)) scale(var(--scale, 1));
+      border: 1.5em solid;
+    }
+
+    .ring:nth-child(1) {
+      --translateZ: -4.5em;
+    }
+
+    .ring:nth-child(2) {
+      --translateZ: -3.6em;
+    }
+
+    .ring:nth-child(3) {
+      --translateZ: -2.7em;
+    }
+
+    .ring:nth-child(4) {
+      --translateZ: -1.8em;
+    }
+
+    .ring:nth-child(5) {
+      --translateZ: -0.9em;
+    }
+
+    .ring:nth-child(6) {
+      --translateZ: 0em;
+    }
+
+    .ring:nth-child(7) {
+      --translateZ: 0.9em;
+    }
+
+    .ring:nth-child(8) {
+      --translateZ: 1.8em;
+    }
+
+    .ring:nth-child(9) {
+      --translateZ: 2.7em;
+    }
+
+    .ring:nth-child(10) {
+      --translateZ: 3.6em;
+    }
+
+    .ring:nth-child(11) {
+      --translateZ: 4.5em;
+    }
+
+    .ring:nth-child(1),
+    .ring:nth-child(11) {
+      --scale: 0.43;
+    }
+
+    .ring:nth-child(2),
+    .ring:nth-child(10) {
+      --scale: 0.69;
+    }
+
+    .ring:nth-child(3),
+    .ring:nth-child(9) {
+      --scale: 0.84;
+    }
+
+    .ring:nth-child(4),
+    .ring:nth-child(8) {
+      --scale: 0.93;
+    }
+
+    .ring:nth-child(5),
+    .ring:nth-child(7) {
+      --scale: 0.98;
+    }
+
+    .ring::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10em;
+      height: 10em;
+      border-radius: 50%;
+      background-image: radial-gradient(#000, #0000 5em), conic-gradient(#fff7, #0007, #fff7);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ball">
+
+    <div class="x">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+    <div class="y">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+    <div class="z">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
