@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transform Origin</title>
+  <style>
+    .box {
+      background: lightblue;
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      transition: transform 0.5s linear;
+      transform-origin: top left;
+      transform-origin: bottom left;
+      transform-style: preserve-3D;
+    }
+
+    .box-rotate {
+      transform: rotate(360deg);
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <button>click me</button>
+</body>
+
+<script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+<script>
+  $('button').click(function() {
+    $('.box').toggleClass('box-rotate');
+  });
+</script>
+
+</html>
