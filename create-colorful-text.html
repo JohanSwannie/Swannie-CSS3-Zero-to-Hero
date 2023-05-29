@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Colorful Text</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: powderblue;
+    }
+
+    pre {
+      position: absolute;
+      top: 5%;
+      left: 25%;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: navy;
+      background-color: peachpuff;
+      border: 3px solid orange;
+      ;
+    }
+
+    strong {
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+      color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+  <pre>
+    <strong>What is HTTP (Hypertext Transfer Protocol)?</strong>
+
+    The Hypertext Transfer Protocol is an application protocol for distributed, collaborative,
+    hypermedia information systems that allows users to communicate data on the World Wide Web.
+
+    <strong>What is the purpose of HTTP?</strong>
+
+    HTTP was invented alongside HTML to create the first interactive, text-based web browser:
+    the original World Wide Web. Today, the protocol remains one of the primary means of using the Internet.
+
+    <strong>How does HTTP work?</strong>
+
+    As a request-response protocol, HTTP gives users a way to interact with web resources such as
+    HTML files by transmitting hypertext messages between clients and servers. HTTP clients
+    generally use Transmission Control Protocol (TCP) connections to communicate with servers.
+
+    HTTP utilizes specific request methods in order to perform various tasks. All HTTP servers
+    use the GET and HEAD methods, but not all support the rest of these request methods:
+
+    GET requests a specific resource in its entirety
+    HEAD requests a specific resource without the body content
+    POST adds content, messages, or data to a new page under an existing web resource
+    PUT directly modifies an existing web resource or creates a new URI if need be
+    DELETE gets rid of a specified resource
+    TRACE shows users any changes or additions made to a web resource
+    OPTIONS shows users which HTTP methods are available for a specific URL
+    CONNECT converts the request connection to a transparent TCP/IP tunnel
+    PATCH partially modifies a web resource
+
+    <strong>Security Concerns Around HTTP</strong>
+
+    Unfortunately, adversaries can choose from many vectors to attack web servers,
+    web applications, and websites. From cross-site scripting (XSS) to HTTP request smuggling,
+    adversaries typically exploit well-known vulnerabilities and misconfigurations—not to
+    mention the HTTP security concerns around sending plaintext credentials via HTTP.
+    The OWASP foundation has highlighted the top 10 security risks to avoid when building
+    web applications, helping improve defenses against HTTP-based attacks.
+
+    Adversaries also take advantage of HTTP to blend in with normal traffic while sneaking
+    exfiltrated data and command-and-control communications past perimeter defenses.
+    All these attacks also occur over HTTPS, an encrypted HTTP connection established with
+    SSL/TLS. Learn how monitoring encrypted traffic matters for HTTP-based attacks such as
+    the ProxyLogon Exchange Server exploit.
+  </pre>
+
+</body>
+
+</html>
