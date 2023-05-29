@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Before & After Examples</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      background: #DDF9F1;
+    }
+
+    #x1 {
+      position: absolute;
+      top: 5%;
+      left: 10%;
+      font-size: 30px;
+      color: navy;
+    }
+
+    #x1::before {
+      content: 'Good Morning\00a0\00a0\00a0\00a0 - \00a0\00a0\00a0\00a0';
+      font-size: 20px;
+      color: red;
+    }
+
+    #x1::after {
+      content: '\00a0\00a0\00a0\00a0 - \00a0\00a0\00a0\00a0Goodbye';
+      font-size: 20px;
+      color: red;
+    }
+
+    #x2 {
+      position: absolute;
+      top: 15%;
+      left: 10%;
+      font-size: 30px;
+      color: green;
+    }
+
+    #x2::before {
+      content: open-quote '\00a0\00a0';
+      font-size: 20px;
+      color: black;
+    }
+
+    #x2::after {
+      content: '\00a0\00a0'close-quote;
+      font-size: 20px;
+      color: black;
+    }
+
+    #x3 {
+      position: absolute;
+      top: 25%;
+      left: 10%;
+      font-size: 30px;
+      color: yellow;
+    }
+
+    #x3 a[checker]::after {
+      content: attr(checker);
+      display: block;
+      font-size: 0.7em;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+      background: gray;
+      padding: 0.5em 2em;
+      border: 2px solid red;
+      border-radius: 45%;
+      top: 8%;
+      left: 220px;
+      white-space: nowrap;
+      transform: scale(0);
+      transition: transform ease-out 1.45s;
+    }
+
+    #x3 a[checker]:hover::after {
+      transform: scale(1);
+    }
+
+    .counters {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      counter-reset: swannie-counter;
+    }
+
+    .section {
+      position: relative;
+      font-size: 20px;
+      color: red;
+      line-height: 30px;
+    }
+
+    .section::before {
+      counter-increment: swannie-counter;
+      content: counter(swannie-counter) ' ';
+      position: absolute;
+      left: -2.5em;
+      background: lightgreen;
+      width: 1em;
+      height: 1em;
+      border: 2px solid gray;
+      border-radius: 53%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lists {
+      position: absolute;
+      top: 65%;
+      left: 10%;
+      counter-reset: stellie-counter;
+    }
+
+    ol li {
+      position: relative;
+      font-size: 15px;
+      font-weight: bold;
+      color: olive;
+      line-height: 30px;
+      list-style: none;
+    }
+
+    li::before {
+      counter-increment: stellie-counter;
+      content: counter(stellie-counter) ' ';
+      position: absolute;
+      left: -2.5em;
+      background: lightgray;
+      width: 1.5em;
+      height: 1.5em;
+      border: 2px solid #000;
+      border-radius: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li::after {
+      content: '\00a0\00a0 -  Invest Invest Invest !!!';
+      background: lightgreen;
+      color: red;
+      display: none;
+    }
+
+    li:hover::after {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <p id="x1">This is example 1 of before & after CSS properties</p>
+    <p id="x2">This is example 2 of before & after CSS properties</p>
+    <p id="x3"><a href="#" checker="This is a fantastic checker">Check it out</a></p>
+  </div>
+
+  <div class="counters">
+    <h3 class="section">Heading for administration</h3>
+    <h3 class="section">Heading for Software Developers</h3>
+    <h3 class="section">Heading for Network Engineer</h3>
+    <h3 class="section">Heading for Database Admistrators</h3>
+    <h3 class="section">Heading for System Administrators</h3>
+  </div>
+
+  <div class="lists">
+    <ol>
+      <li>Company - Infoplan</li>
+      <li>Company - BMW</li>
+      <li>Company - ABSA</li>
+      <li>Company - Standard Bank</li>
+    </ol>
+  </div>
+</body>
+
+</html>
