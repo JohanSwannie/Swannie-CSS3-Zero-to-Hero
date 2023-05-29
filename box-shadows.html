@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cinzel:wght@400;900&display=swap" rel="stylesheet">
+  <title>Box Shadows</title>
+  <style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    background: peachpuff;;
+    font-size: 1.5em;
+    font-family: 'Cinzel', serif;
+    padding: 2.2em;
+    border-radius: 40%;
+    box-shadow: 0 0 0 11px #0FEA19,
+                0 0 0 25px #EE19A7,
+                0 0 0 40px #A33EF1,
+                0 0 0 55px #1F778A,
+                0 0 0 70px #043DDD,
+                0 0 0 100px #3BCCA1;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button>Confirm</button>
+  </div>
+</body>
+</html>
